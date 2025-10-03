@@ -1,5 +1,4 @@
 ﻿using LinkedList.Core;
-using System.ComponentModel.Design;
 
 var list = new SinglyLinkedList<string>();
 var opt = string.Empty;
