@@ -25,14 +25,16 @@ do
             Console.WriteLine(list.Contains(value) ? "Value found" : "Value not found");
             break;
         case "4":
+            Console.Write("Enter value to remove: ");
+            list.Remove(Console.ReadLine()!);
+            break;
+        case "5":
             list.PrintList();
             break;
         default:
             Console.WriteLine("Invalid option");
             break;
-    }
-    
-    
+    }    
 } while (opt != "0");
 
 string Menu()
@@ -42,7 +44,8 @@ string Menu()
     Console.WriteLine("1. Insert at beginning");
     Console.WriteLine("2. Insert at end");
     Console.WriteLine("3. Search value");
-    Console.WriteLine("4. Print list");
+    Console.WriteLine("4. Remove value");
+    Console.WriteLine("5. Print list");
     Console.WriteLine("0. Exit");
     Console.Write("Choose an option: ");
     return Console.ReadLine()!;

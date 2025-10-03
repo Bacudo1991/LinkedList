@@ -48,6 +48,28 @@ public class SinglyLinkedList<T>
         return false;
     }
 
+    public void Remove(T data)
+    {
+        if (_head == null)
+        {
+            return;
+        }
+        if (_head.Data!.Equals(data))
+        {
+            _head = _head.Next;
+            return;
+        }
+        var current = _head;
+        while (current.Next != null && !current.Next.Data!.Equals(data))
+        {
+            current = current.Next;
+        }
+        if (current.Next != null)
+        {
+            current.Next = current.Next.Next;
+        }
+    }
+
     public void PrintList()
     {
         var current = _head;
