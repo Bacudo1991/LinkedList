@@ -20,6 +20,11 @@ do
             list.InsertAtEnd(Console.ReadLine()!);
             break;
         case "3":
+            Console.Write("Enter value to search: ");
+            var value = Console.ReadLine()!;
+            Console.WriteLine(list.Contains(value) ? "Value found" : "Value not found");
+            break;
+        case "4":
             list.PrintList();
             break;
         default:
@@ -36,7 +41,8 @@ string Menu()
     Console.WriteLine();
     Console.WriteLine("1. Insert at beginning");
     Console.WriteLine("2. Insert at end");
-    Console.WriteLine("3. Print list");
+    Console.WriteLine("3. Search value");
+    Console.WriteLine("4. Print list");
     Console.WriteLine("0. Exit");
     Console.Write("Choose an option: ");
     return Console.ReadLine()!;

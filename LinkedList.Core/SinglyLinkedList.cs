@@ -34,12 +34,26 @@ public class SinglyLinkedList<T>
         }
     }
 
+    public bool Contains(T data)
+    {
+        var current = _head;
+        while (current != null)
+        {
+            if (current.Data!.Equals(data))
+            {
+                return true;
+            }
+            current = current.Next;
+        }
+        return false;
+    }
+
     public void PrintList()
     {
         var current = _head;
         while (current != null)
         {
-            Console.WriteLine($"{ current.Data} -> ");
+            Console.Write($"{ current.Data} -> ");
             current = current.Next;
         }
         Console.WriteLine("null");
