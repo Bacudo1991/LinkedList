@@ -40,7 +40,6 @@ do
                     Console.WriteLine($"The value {valueToRemove} does not exist in the list");
                 }                
             }
-
             break;
         case "5":
             list.Clear();

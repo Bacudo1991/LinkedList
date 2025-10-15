@@ -80,7 +80,7 @@ public class SinglyLinkedList<T>
         var current = _head;
         while (current != null)
         {
-            Console.Write($"{ current.Data} -> ");
+            Console.Write($"{current.Data} -> ");
             current = current.Next;
         }
         Console.WriteLine("null");
