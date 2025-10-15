@@ -70,6 +70,11 @@ public class SinglyLinkedList<T>
         }
     }
 
+    public void Clear()
+    {
+        _head = null;
+    }
+
     public void PrintList()
     {
         var current = _head;
