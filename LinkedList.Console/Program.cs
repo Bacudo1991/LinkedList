@@ -67,5 +67,5 @@ string Menu()
     Console.WriteLine("6. Print list");
     Console.WriteLine("0. Exit");
     Console.Write("Choose an option: ");
-    return Console.ReadLine()!;
+    return Console.ReadLine() ?? "0";
 }
